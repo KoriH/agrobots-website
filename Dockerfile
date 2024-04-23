@@ -1,11 +1,17 @@
-FROM node:18-alpine
+FROM node:18-alpine as build
 
-WORKDIR /website/
+WORKDIR /website
 
-COPY public/ /website/public
-COPY src/ /website/src
-COPY package.json / /website/
-
+COPY package*.json ./
 RUN npm install
 
-CMD ["npm", "start"]
+COPY . .
+RUN npm run build
+
+FROM nginx:stable-alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
