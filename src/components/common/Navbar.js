@@ -29,7 +29,7 @@ const Navbar = () => {
       <nav className="h-full">
         <div className="h-full flex items-center justify-between py-4 md:px-8 px-4">
           <div className="h-full font-bold cursor-pointer ">
-            <a href="/"><img className="h-full" src={agrobot} alt="UBC Agrobot" /></a>
+            <Link to="/"><img className="h-full" src={agrobot} alt="UBC Agrobot" /></Link>
           </div>
 
           <ul className="list-none lg:flex items-center gap-8 hidden">
@@ -40,12 +40,12 @@ const Navbar = () => {
                 onMouseEnter={() => togglePortfolioMenu(e.dropdown)}
                 onMouseLeave={() => togglePortfolioMenu(e.dropdown)}
               >
-                <a
-                  href={e.link}
+                <Link
+                  to={e.link}
                   className="text-[#8cbc24] hover:text-[#8cbc24] transition-all duration-200 flex items-center"
                 >
                   {e.id} {e.dropdown && <FaChevronDown size='16px' style={{ margin: '3px 0 0 4px' }} />}
-                </a>
+                </Link>
                 {e.dropdown && isSubMenuOpen && (
                   <ul
                     className="absolute top-full left-[-40px] px-[40px] pb-[20px]  bg-[#f8f7f1] backdrop-blur-md rounded"
@@ -53,12 +53,12 @@ const Navbar = () => {
                   >
                     {e.dropdown.map((item) => (
                       <li key={item.id}>
-                        <a
-                          href={item.link}
+                        <Link
+                          to={item.link}
                           className="block text-[#8cbc24] py-[2px] px-0"
                         >
                           {item.id}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

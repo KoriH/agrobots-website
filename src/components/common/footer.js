@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LOGO } from "../../assets";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -13,18 +14,18 @@ function Footer() {
 
                 <div className='w-full md:w-[80%] text-[18px]'>
                     <ul className='w-full font-bold capitalize  flex flex-col md:flex-row md:justify-evenly'>
-                        <li className='p-[10px]'><a href="/">Home</a></li>
+                        <li className='p-[10px]'><Link to="/">Home</Link></li>
                         <li className='p-[10px]'>
-                            <a href="/portfolio">Portfolio </a>
+                            <Link to="/portfolio">Portfolio </Link>
                             <ul className='font-normal leading-6 text-left'>
-                                <li><a href="/agrobot">AgroBot</a></li>
-                                <li><a href="/agroponics">AgroPonics</a></li>
+                                <li><Link to="/agrobot">AgroBot</Link></li>
+                                <li><Link to="/agroponics">AgroPonics</Link></li>
                             </ul>
                         </li>
-                        <li className='p-[10px]'><a href="/sponsorship">Sponsorship</a></li>
-                        <li className='p-[10px]'><a href="/recruitment">Recruitment</a></li>
-                        <li className='p-[10px]'><a href="/contactus">Contact Us</a></li>
-                        <li className='p-[10px]'><a href="/aboutus">About Us</a></li>
+                        <li className='p-[10px]'><Link to="/sponsorship">Sponsorship</Link></li>
+                        <li className='p-[10px]'><Link to="/recruitment">Recruitment</Link></li>
+                        <li className='p-[10px]'><Link to="/contactus">Contact Us</Link></li>
+                        <li className='p-[10px]'><Link to="/aboutus">About Us</Link></li>
                     </ul>
                 </div>
             </div>
