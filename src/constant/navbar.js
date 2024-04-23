@@ -1,7 +1,7 @@
 export const navLinks = [
     {
         id : "Home",
-        link : "/"
+        link : "/agrobots-website"
     },
     {
         id : "Portfolio",

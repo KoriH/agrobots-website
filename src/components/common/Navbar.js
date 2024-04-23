@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 
 // import icons
@@ -86,8 +87,8 @@ const Navbar = () => {
             <a href="/portfolio" className="block hover:text-grey-400 my-2 mx-4">
               Portfolio
               <span className='font-normal'>
-                <a href="/agrobot" className="block hover:text-grey-400 my-2 mx-4">AgroBot</a>
-                <a href="/agroponics" className="block hover:text-grey-400 my-2 mx-4">AgroPonics</a>
+                <Link to="/agrobot" className="block hover:text-grey-400 my-2 mx-4">AgroBot</Link>
+                <Link to="/agroponics" className="block hover:text-grey-400 my-2 mx-4">AgroPonics</Link>
               </span>
             </a>
             <a href="/sponsorship" className="block hover:text-grey-400 my-2 mx-4">
