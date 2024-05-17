@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { LOGO } from "../../assets";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
 function Footer() {
     return (
@@ -36,6 +37,23 @@ function Footer() {
                 <div className="">Copright © 2024. All rights Reserved.</div>
 
                 <div>
+{/* 
+                <div style={{ width: '100%', height: '300px' }}>
+                <Map
+                    google={google}
+                    zoom={14}
+                    initialCenter={{ lat: 49.2827, lng: -123.1207 }} // Vancouver coordinates
+                >
+                    <Marker position={{ lat: 49.2827, lng: -123.1207 }} />
+                </Map>
+            </div> */}
+
+                <a
+                        className="underline pt:2 md:pt-0 inline-block"
+                        target="_blank" 
+                        href="mailto:ubcagrobot@gmail.com"
+                    > <AiOutlineMail size={30} /> </a>{" "}
+
                     <a
                         className="underline pt:2 md:pt-0 inline-block"
                         href="https://www.instagram.com/ubcagrobots"
